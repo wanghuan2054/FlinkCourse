@@ -19,7 +19,7 @@ public class OracleSink extends RichSinkFunction<SocketWindowWordCount.WordWithC
     {
         super.open(parameters);
         Class.forName("oracle.jdbc.OracleDriver");
-        connection = DriverManager.getConnection("jdbc:oracle:thin:@10.120.230.61:1521:mdwtst", "EDBADM", "EDBADM");
+        connection = DriverManager.getConnection("jdbc:oracle:thin:@XX.XX.XX.XX:1521:mdwtst", "XX", "XX");
         statement = connection.prepareStatement("INSERT INTO Test VALUES (?,?)");
     }
 
